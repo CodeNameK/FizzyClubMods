@@ -5,17 +5,17 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import MinelifeMod.Gui.Funtion.INVFunction;
-import MinelifeMod.Gui.Inv.MinelifeInv;
-import MinelifeMod.Gui.Slot.SlotArmor;
-import MinelifeMod.Gui.Slot.SlotCustomArmor;
-import MinelifeMod.Items.ItemCustomArmor;
+import FizzyClubMods.Gui.Inv.FizzyClubInv;
+import FizzyClubMods.Gui.Funtion.INVFunction;
+import FizzyClubMods.Gui.Slot.SlotArmor;
+import FizzyClubMods.Gui.Slot.SlotCustomArmor;
+import FizzyClubMods.Items.ItemCustomArmor;
 
 public class InventoryContainer extends Container {
-	MinelifeInv inventory;
-	private static final int ARMOR_START = MinelifeInv.ArmorSlots.length;
+	FizzyClubInv inventory;
+	private static final int ARMOR_START = FizzyClubInv.ArmorSlots.length;
 
-	public InventoryContainer(EntityPlayer entityplayer, MinelifeInv inv) {
+	public InventoryContainer(EntityPlayer entityplayer, FizzyClubInv inv) {
 		int var3;
 		int var4;
 
@@ -68,7 +68,7 @@ public class InventoryContainer extends Container {
 			// if item is our custom item
 			if (itemstack.getItem() instanceof ItemCustomArmor) {
 				if (!this.mergeItemStack(itemstack, 0,
-						MinelifeInv.ArmorSlots.length, false)) {
+						FizzyClubInv.ArmorSlots.length, false)) {
 					return null;
 				}
 			}

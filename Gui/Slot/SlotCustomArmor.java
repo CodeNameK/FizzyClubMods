@@ -2,9 +2,9 @@ package FizzyClubMods.Gui.Slot;
 
 import java.io.PrintStream;
 
-import MinelifeMod.Gui.Funtion.INVFunction;
-import MinelifeMod.Gui.Inv.MinelifeInv;
-import MinelifeMod.Items.ItemCustomArmor;
+import FizzyClubMods.Gui.Funtion.INVFunction;
+import FizzyClubMods.Gui.Inv.FizzyClubInv;
+import FizzyClubMods.Items.ItemCustomArmor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -15,7 +15,7 @@ public class SlotCustomArmor extends Slot
   public int type;
   public EntityPlayer player;
 
-  public SlotCustomArmor(MinelifeInv inv, int var2, int var3, int var4, EntityPlayer var5)
+  public SlotCustomArmor(FizzyClubInv inv, int var2, int var3, int var4, EntityPlayer var5)
   {
     super(inv, var2, var3, var4);
     this.player = var5;
@@ -117,7 +117,7 @@ public class SlotCustomArmor extends Slot
   }
 
   public void onSlotChanged() {
-    INVFunction.addEntry(this.player.username, (MinelifeInv)this.inventory);
+    INVFunction.addEntry(this.player.username, (FizzyClubInv)this.inventory);
     super.onSlotChanged();
   }
 }
