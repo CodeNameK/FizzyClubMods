@@ -3,8 +3,8 @@ package FizzyClubMods.Proxy;
 import java.util.Iterator;
 import java.util.Map;
 
-import FizzyClubMods.Gui.KeyHandler.InventoryKeyHandler;
-import FizzyClubMods.Slot.Entity.Render.RenderCustomPlayer;
+import MinelifeMod.Gui.KeyHandler.InventoryKeyHandler;
+import MinelifeMod.entity.render.RenderCustomPlayer;
 import cpw.mods.fml.client.registry.KeyBindingRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.client.model.ModelBiped;
@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.player.EntityPlayer;
 
-public class FizzyClubClient extends FizzyClubServer{
+public class MinelifeClient extends MinelifeServer{
 
 	
 	  public void renderPlayer()

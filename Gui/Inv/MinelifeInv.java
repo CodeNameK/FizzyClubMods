@@ -7,15 +7,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.MinecraftServer;
-import FizzyClubMods.Gui.Funtion.INVFunction;
+import MinelifeMod.Gui.Funtion.INVFunction;
 
-public class FizzyClubInv implements IInventory {
+public class MinelifeInv implements IInventory {
 	
 	
 	public static ItemStack[] ArmorSlots = new ItemStack[8];
 	public String playername;
 
-	public FizzyClubInv(String name) {
+	public MinelifeInv(String name) {
 		this.playername = name;
 	}
 

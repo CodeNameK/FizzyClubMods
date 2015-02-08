@@ -1,6 +1,6 @@
 package FizzyClubMods.Proxy;
 
-public class FizzyClubServer {
+public class MinelifeServer {
 
 	public void renderPlayer() {
 		// TODO Auto-generated method stub

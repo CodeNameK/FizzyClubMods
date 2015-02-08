@@ -18,14 +18,14 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import FizzyClubMods.Gui.Cons.InventoryContainer;
-import FizzyClubMods.Gui.Inv.FizzyClubInv;
+import FizzyClubMods.Gui.Inv.MinelifeInv;
 
 public class GuiInventory extends GuiContainer
 {
   private float xSize_lo;
   private float ySize_lo;
 
-  public GuiInventory(EntityPlayer entity, FizzyClubInv inv)
+  public GuiInventory(EntityPlayer entity, MinelifeInv inv)
   {
     super(new InventoryContainer(entity, inv));
   }

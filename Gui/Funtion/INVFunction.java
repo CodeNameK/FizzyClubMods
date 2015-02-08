@@ -1,6 +1,6 @@
 package FizzyClubMods.Gui.Funtion;
 
-import FizzyClubMods.Gui.Inv.FizzyClubInv;
+import MinelifeMod.Gui.Inv.MinelifeInv;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
@@ -8,7 +8,7 @@ import net.minecraft.server.management.ServerConfigurationManager;
 
 public class INVFunction
 {
-  public static void addEntry(String var1, FizzyClubInv var2)
+  public static void addEntry(String var1, MinelifeInv var2)
   {
     if ((MinecraftServer.getServer() != null) && (MinecraftServer.getServer().getConfigurationManager() != null))
     {
@@ -35,8 +35,8 @@ public class INVFunction
     }
   }
 
-  public static FizzyClubInv getInventory(String var1) {
-	  FizzyClubInv var2 = new FizzyClubInv(var1);
+  public static MinelifeInv getInventory(String var1) {
+	  MinelifeInv var2 = new MinelifeInv(var1);
 
     if ((MinecraftServer.getServer() != null) && (MinecraftServer.getServer().getConfigurationManager() != null))
     {

@@ -17,12 +17,11 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import FizzyClubMods.Gui.Inv.FizzyClubInv;
-import FizzyClubMods.Slot.Armor.Model.BuffModel;
-import FizzyClubMods.Slot.Armor.Model.Wing1Model;
-import FizzyClubMods.Gui.Funtion.INVFunction;
-import FizzyClubMods.Gui.Inv.FizzyClubInv;
-import FizzyClubMods.Items.MinelifeArmor;
+import MinelifeMod.Armor.Model.BuffModel;
+import MinelifeMod.Armor.Model.Wing1Model;
+import MinelifeMod.Gui.Funtion.INVFunction;
+import MinelifeMod.Gui.Inv.MinelifeInv;
+import MinelifeMod.Items.MinelifeArmor;
 
 public class RenderCustomPlayer extends RenderPlayer {
 	
@@ -31,7 +30,7 @@ public class RenderCustomPlayer extends RenderPlayer {
 	private ModelBiped f;
 	public static RenderCustomPlayer instance;
 	private Minecraft mc;
-	FizzyClubInv inv;
+	MinelifeInv inv;
 	
 	
 	public ItemStack backpackstack;
