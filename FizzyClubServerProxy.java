@@ -15,4 +15,11 @@ public class FizzyClubServerProxy
 	public void registerServerTickHandler()
 	{
 	}
+	public void renderPlayer()
+	{
+	}
+
+	public void registerKeyhandler()
+	{
+	}
 }

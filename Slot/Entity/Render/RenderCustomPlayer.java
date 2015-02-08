@@ -21,7 +21,7 @@ import FizzyClubMods.Gui.Inv.FizzyClubInv;
 import FizzyClubMods.Slot.Armor.Model.BuffModel;
 import FizzyClubMods.Slot.Armor.Model.Wing1Model;
 import FizzyClubMods.Gui.Funtion.INVFunction;
-import FizzyClubMods.Items.MinelifeArmor;
+import FizzyClubMods.Items.FizzyClubArmor;
 
 public class RenderCustomPlayer extends RenderPlayer {
 	
@@ -69,12 +69,12 @@ public class RenderCustomPlayer extends RenderPlayer {
 		if (this.backpackstack != null) {
 			GL11.glPushAttrib(1048575);
 			GL11.glPushMatrix();
-			if (this.backpackstack.getItem() == MinelifeArmor.Wing1) {
+			if (this.backpackstack.getItem() == FizzyClubArmor.Wing1) {
 				this.mc.renderEngine.bindTexture(new ResourceLocation(
 						"minelife:textures/armor/wing.png"));
 				this.wing1.renderWing(0.0325F);
 			}
-			if (this.backpackstack.getItem() == MinelifeArmor.Wing2) {
+			if (this.backpackstack.getItem() == FizzyClubArmor.Wing2) {
 				this.mc.renderEngine.bindTexture(new ResourceLocation(
 						"minelife:textures/armor/wing.png"));
 				this.wing1.renderWing(0.0325F);
@@ -86,7 +86,7 @@ public class RenderCustomPlayer extends RenderPlayer {
 		}
 		if(this.Buffstack!=null){
 			
-			if(Buffstack.getItem()==MinelifeArmor.Buff1){
+			if(Buffstack.getItem()==FizzyClubArmor.Buff1){
 				this.mc.renderEngine.bindTexture(new ResourceLocation(
 						"minelife:textures/armor/buff.png"));
 				this.Buff.render(0.0625F);

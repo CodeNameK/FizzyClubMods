@@ -16,8 +16,14 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+
+import FizzyClubMods.Gui.FizzyClubGuiHandler;
+import FizzyClubMods.Gui.packet.FizzyClubPacketHandler;
+import FizzyClubMods.Items.FizzyClubArmor;
+import FizzyClubMods.Proxy.FizzyClubServer;
 
 @Mod(modid = FizzyClubMain.MODID, name = FizzyClubMain.NAME, version = FizzyClubMain.VERSION)
 
@@ -112,6 +118,11 @@ public class FizzyClubMain {
 	public void load(FMLInitializationEvent Event)
 	{
 		proxy.init();
+	    proxy.renderPlayer();
+	    proxy.registerKeyhandler();
+		NetworkRegistry.instance().registerGuiHandler(instance, new FizzyClubGuiHandler());
+		FizzyClubArmor.registerWing();
+		FizzyClubArmor.registerBuff();
 		
 		/*
 		// CreativeTabs
