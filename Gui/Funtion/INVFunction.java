@@ -19,12 +19,12 @@ public class INVFunction
         {
           if (var3.getEntityData().hasKey("PlayerPersisted"))
           {
-            var3.getEntityData().getCompoundTag("PlayerPersisted").setCompoundTag("iCraftInv", var2.writeToNBT(new NBTTagCompound("iCraftInv")));
+            var3.getEntityData().getCompoundTag("PlayerPersisted").setCompoundTag("MinelifeInv", var2.writeToNBT(new NBTTagCompound("MinelifeInv")));
           }
           else
           {
             var3.getEntityData().setCompoundTag("PlayerPersisted", new NBTTagCompound("PlayerPersisted"));
-            var3.getEntityData().getCompoundTag("PlayerPersisted").setCompoundTag("iCraftInv", var2.writeToNBT(new NBTTagCompound("iCraftInv")));
+            var3.getEntityData().getCompoundTag("PlayerPersisted").setCompoundTag("MinelifeInv", var2.writeToNBT(new NBTTagCompound("MinelifeInv")));
           }
         }
       }
@@ -44,9 +44,9 @@ public class INVFunction
 
       if (var3 != null)
       {
-        if ((var3.getEntityData().hasKey("PlayerPersisted")) && (var3.getEntityData().getCompoundTag("PlayerPersisted").hasKey("iCraftInv")))
+        if ((var3.getEntityData().hasKey("PlayerPersisted")) && (var3.getEntityData().getCompoundTag("PlayerPersisted").hasKey("MinelifeInv")))
         {
-          var2.readFromNBT(var3.getEntityData().getCompoundTag("PlayerPersisted").getCompoundTag("iCraftInv"));
+          var2.readFromNBT(var3.getEntityData().getCompoundTag("PlayerPersisted").getCompoundTag("MinelifeInv"));
         }
         else
         {
@@ -55,7 +55,7 @@ public class INVFunction
             var3.getEntityData().setCompoundTag("PlayerPersisted", new NBTTagCompound("PlayerPersisted"));
           }
 
-          var3.getEntityData().getCompoundTag("PlayerPersisted").setCompoundTag("iCraftInv", var2.writeToNBT(new NBTTagCompound()));
+          var3.getEntityData().getCompoundTag("PlayerPersisted").setCompoundTag("MinelifeInv", var2.writeToNBT(new NBTTagCompound()));
         }
       }
     }

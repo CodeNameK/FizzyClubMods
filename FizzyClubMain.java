@@ -27,7 +27,11 @@ import FizzyClubMods.Proxy.FizzyClubServer;
 
 @Mod(modid = FizzyClubMain.MODID, name = FizzyClubMain.NAME, version = FizzyClubMain.VERSION)
 
-@NetworkMod(clientSideRequired = true, serverSideRequired = true)
+@NetworkMod(clientSideRequired = true,
+serverSideRequired = true,
+channels = "Minelife",
+packetHandler = FizzyClubPacketHandler.class
+)
 
 public class FizzyClubMain {
 	
@@ -38,7 +42,7 @@ public class FizzyClubMain {
 
 	public static FizzyClubMain instance;
 
-	@SidedProxy(clientSide = "FizzyClubMods.Main.FizzyClubClientProxy", serverSide = "FizzyClubMods.Main.FizzyClubServerProxy")
+	@SidedProxy(clientSide = "FizzyClubMods.FizzyClubClientProxy", serverSide = "FizzyClubMods.FizzyClubServerProxy")
 	
 	public static FizzyClubServerProxy proxy;
 	

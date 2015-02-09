@@ -1,6 +1,8 @@
 package FizzyClubMods.Gui.Cons;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemArmor;
@@ -12,16 +14,23 @@ import FizzyClubMods.Gui.Slot.SlotCustomArmor;
 import FizzyClubMods.Items.ItemCustomArmor;
 
 public class InventoryContainer extends Container {
+	
 	FizzyClubInv inventory;
-	private static final int ARMOR_START = FizzyClubInv.ArmorSlots.length;
+	
 
 	public InventoryContainer(EntityPlayer entityplayer, FizzyClubInv inv) {
 		int var3;
 		int var4;
-
-		addSlotToContainer(new SlotCustomArmor(inv, 0, 80, 10, entityplayer));
-		addSlotToContainer(new SlotCustomArmor(inv, 1, 80, 60, entityplayer));
-
+//
+     	addSlotToContainer(new SlotCustomArmor(inv, 0, 80, 10, entityplayer));
+//		addSlotToContainer(new SlotCustomArmor(inv, 1, 80, 30, entityplayer));
+//		//addSlotToContainer(new SlotCustomArmor(inv, 1, 80, 60, entityplayer));
+//		addSlotToContainer(new SlotCustomArmor(inv, 4, 80, 60, entityplayer));
+		
+//		for (var3 = 0; var3 < 4; ++var3) {
+//
+//			addSlotToContainer(new SlotCustomArmor(inv,var3, 80,10+(var3*18), entityplayer));
+//		}
 		for (var3 = 0; var3 < 4; ++var3) {
 			addSlotToContainer(new SlotArmor(entityplayer, inv,
 					inv.getSizeInventory() - 1 - var3, 8, 8 + var3 * 18, var3));
@@ -51,37 +60,24 @@ public class InventoryContainer extends Container {
 	public boolean canInteractWith(EntityPlayer entityplayer) {
 		return true;
 	}
-
-	@SuppressWarnings("null")
-	public ItemStack transferStackInSlot(EntityPlayer player, int par2) {
-		ItemStack itemstack = null;
-		Slot slot = (Slot) this.inventorySlots.get(par2);
-
-		if (slot != null && slot.getHasStack()) {
-			ItemStack itemstack1 = slot.getStack();
-			itemstack = itemstack1.copy();
-			slot.onSlotChange(itemstack1, itemstack);
-		}
-		// Item is in inventory / hotbar, try to place either in custom or armor
-		// slots
-		else {
-			// if item is our custom item
-			if (itemstack.getItem() instanceof ItemCustomArmor) {
-				if (!this.mergeItemStack(itemstack, 0,
-						FizzyClubInv.ArmorSlots.length, false)) {
-					return null;
-				}
-			}
-			// if item is armor
-			else if (itemstack.getItem() instanceof ItemArmor) {
-				int type = ((ItemArmor) itemstack.getItem()).armorType;
-				if (!this.mergeItemStack(itemstack, ARMOR_START + type,
-						ARMOR_START + type + 1, false)) {
-					return null;
-				}
-			}
-		}
-
-		return itemstack;
-	}
+	
+	
+	
+    public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
+    {
+		return null;
+//        if (par2 >= this.inventorySlots.size() - 9 && par2 < this.inventorySlots.size())
+//        {
+//            Slot slot = (Slot)this.inventorySlots.get(par2);
+//
+//            if (slot != null && slot.getHasStack())
+//            {
+//                slot.putStack((ItemStack)null);
+//             
+//            }
+//        }
+//
+//        return null;
+   }
+	
 }
