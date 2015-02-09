@@ -12,7 +12,7 @@ import FizzyClubMods.Gui.Funtion.INVFunction;
 public class FizzyClubInv implements IInventory {
 	
 	
-	public static ItemStack[] ArmorSlots = new ItemStack[8];
+	public ItemStack[] ArmorSlots = new ItemStack[8];
 	public String playername;
 
 	public FizzyClubInv(String name) {
