@@ -21,16 +21,12 @@ public class InventoryContainer extends Container {
 	public InventoryContainer(EntityPlayer entityplayer, FizzyClubInv inv) {
 		int var3;
 		int var4;
-//
-     	addSlotToContainer(new SlotCustomArmor(inv, 0, 80, 10, entityplayer));
-//		addSlotToContainer(new SlotCustomArmor(inv, 1, 80, 30, entityplayer));
-//		//addSlotToContainer(new SlotCustomArmor(inv, 1, 80, 60, entityplayer));
-//		addSlotToContainer(new SlotCustomArmor(inv, 4, 80, 60, entityplayer));
 		
-//		for (var3 = 0; var3 < 4; ++var3) {
-//
-//			addSlotToContainer(new SlotCustomArmor(inv,var3, 80,10+(var3*18), entityplayer));
-//		}
+		
+		for (var3 = 0; var3 < 4; ++var3) {
+
+			addSlotToContainer(new SlotCustomArmor(inv,var3, 80,10+(var3*18), entityplayer));
+		}
 		for (var3 = 0; var3 < 4; ++var3) {
 			addSlotToContainer(new SlotArmor(entityplayer, inv,
 					inv.getSizeInventory() - 1 - var3, 8, 8 + var3 * 18, var3));
