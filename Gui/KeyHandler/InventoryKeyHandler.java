@@ -30,7 +30,7 @@ public class InventoryKeyHandler extends KeyBindingRegistry.KeyHandler
 
   public String getLabel()
   {
-    return "Minelife";
+    return "FizzyClubMods";
   }
 
   public void keyDown(EnumSet<TickType> types, KeyBinding kb, boolean tickEnd, boolean isRepeat)
@@ -48,9 +48,9 @@ public class InventoryKeyHandler extends KeyBindingRegistry.KeyHandler
       try
       {
         var5.writeInt(1);
-        Packet250CustomPayload var6 = new Packet250CustomPayload("Minelife", var4.toByteArray());
+        Packet250CustomPayload var6 = new Packet250CustomPayload("FizzyClubMods", var4.toByteArray());
         PacketDispatcher.sendPacketToServer(var6);
-        System.out.println("Packet Open gui Send");
+       // System.out.println("Packet Open gui Send");
       }
       catch (IOException var7)
       {

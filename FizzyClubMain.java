@@ -29,7 +29,7 @@ import FizzyClubMods.Proxy.FizzyClubServer;
 
 @NetworkMod(clientSideRequired = true,
 serverSideRequired = true,
-channels = "Minelife",
+channels = "FizzyClubMods",
 packetHandler = FizzyClubPacketHandler.class
 )
 

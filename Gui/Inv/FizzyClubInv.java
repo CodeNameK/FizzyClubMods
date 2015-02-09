@@ -67,7 +67,7 @@ public class FizzyClubInv implements IInventory {
 	}
 
 	public String getInvName() {
-		return "MinelifeInv";
+		return "FizzyClubINV";
 	}
 
 	public boolean isInvNameLocalized() {

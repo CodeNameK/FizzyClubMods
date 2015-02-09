@@ -19,7 +19,7 @@ public class FizzyClubPacketHandler
 {
   public void onPacketData(INetworkManager manager, Packet250CustomPayload packet, Player player)
   {
-    if (packet.channel.equals("Minelife"))
+    if (packet.channel.equals("FizzyClubMods"))
     {
     	packetClient(packet, player);
     }
