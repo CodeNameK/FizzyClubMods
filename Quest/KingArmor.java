@@ -1,5 +1,6 @@
 package FizzyClubMods.Quest;
 
+import FizzyClubMods.Items.FizzyClubItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
@@ -14,10 +15,10 @@ public class KingArmor extends ItemArmor
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 	String type) {
-	if (stack.getItem() == FizzyClubMain.kinghelmet || stack.getItem() == FizzyClubMain.kingchestplate || stack.getItem() == FizzyClubMain.kingboot) {
+	if (stack.getItem() == FizzyClubItems.kinghelmet || stack.getItem() == FizzyClubItems.kingchestplate || stack.getItem() == FizzyClubItems.kingboot) {
 		return "textures/armors/king_1.png";
 	}
-	if (stack.getItem() == FizzyClubMain.kinglegging) {
+	if (stack.getItem() == FizzyClubItems.kinglegging) {
 		return "textures/armors/king_2.png";
 	}
 	return null;

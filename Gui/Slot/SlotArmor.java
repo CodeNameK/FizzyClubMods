@@ -38,7 +38,6 @@ public class SlotArmor extends Slot
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Icon getBackgroundIconIndex() {
-		return null;
-		//return ItemArmor.func_94602_b(this.armorType);
+		return ItemArmor.func_94602_b(this.armorType);
 	}
 }

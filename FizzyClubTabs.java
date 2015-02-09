@@ -1,5 +1,6 @@
 package FizzyClubMods;
 
+import FizzyClubMods.Items.FizzyClubItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -12,7 +13,7 @@ public class FizzyClubTabs extends CreativeTabs
 	
 	public Item getTabIconItem()
 	{
-		return FizzyClubMods.FizzyClubMain.fizzyclubmods;
+		return FizzyClubItems.fizzyclubmods;
 	}
 	
 	public String getTrankatedTabLabel()

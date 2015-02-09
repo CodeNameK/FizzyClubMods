@@ -2,7 +2,9 @@ package FizzyClubMods.Gui.Inv;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -10,7 +12,7 @@ import net.minecraft.server.MinecraftServer;
 import FizzyClubMods.Gui.Funtion.INVFunction;
 
 public class FizzyClubInv implements IInventory {
-	
+	private static InventoryBasic inventory = new InventoryBasic("tmp", true, 45);
 	
 	public ItemStack[] ArmorSlots = new ItemStack[8];
 	public String playername;
@@ -139,5 +141,10 @@ public class FizzyClubInv implements IInventory {
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return false;
 	}
+
+	   public static InventoryBasic getInventory()
+	    {
+	        return inventory;
+	    }
 
 }

@@ -1,5 +1,6 @@
 package FizzyClubMods;
 
+import FizzyClubMods.Items.FizzyClubItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
@@ -14,10 +15,10 @@ public class EmeraldArmor extends ItemArmor
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 	String type) {
-	if (stack.getItem() == FizzyClubMain.emeraldhelmet || stack.getItem() == FizzyClubMain.emeraldchestplate || stack.getItem() == FizzyClubMain.emeraldboot) {
+	if (stack.getItem() == FizzyClubItems.emeraldhelmet || stack.getItem() == FizzyClubItems.emeraldchestplate || stack.getItem() == FizzyClubItems.emeraldboot) {
 		return "textures/armors/emerald_1.png";
 	}
-	if (stack.getItem() == FizzyClubMain.emeraldlegging) {
+	if (stack.getItem() == FizzyClubItems.emeraldlegging) {
 		return "textures/armors/emerald_2.png";
 	}
 	return null;
